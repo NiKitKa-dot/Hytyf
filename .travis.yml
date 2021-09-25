@@ -1,9 +1,9 @@
-os: Windows
+os: linux
 dist: focal
 language: python
 
 python:
-  - 3.8
+  - 3.7
 
 install:
   - sudo apt -y install python3-distutils
@@ -46,5 +46,5 @@ install:
   - ls bin/ -l
   - echo "TODO"
   - gem install dpl --pre
-  - dpl releases --token $git --file "bin/mobila-0.3-arm64-v8a-debug.apk" --tag_name "v.0.3"
+  - dpl releases --token $GITHUB_TOKEN --file "bin/mobileapp001-0.3-arm64-v8a-debug.apk" --tag_name "v.0.3"
   - echo "OK"
